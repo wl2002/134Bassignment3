@@ -3,18 +3,26 @@ body {
   max-width: 2048px;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
-  color: #333;
   background-color: #fff;
   width:100%;
   height:100%;
+margin: 0;
   }
 
+header {
+	height: 51px;
+	width:100%;
+    background-color: #f8f8f8;
+	
+}
+
 nav {
+
     display: inline;
 	position:fixed;
 	height: 51px;
 	width:100%;
-    background-color: #f8f8f8;
+	background-color: #f8f8f8;
 	border-color: #e7e7e7;
 	border-width: 0 0 1px;
 	z-index: 1030;
@@ -29,16 +37,28 @@ nav ul {
     line-height: 51px;
 }
 nav li {
+   font-size:15px;
 	display: inline;
 	margin-left:20px;
 }
 nav a {
-	color: black;
+	color:#333;
 	display: inline-block;
     width: auto;
 	text-align: center;
 	text-decoration: none;
 }
+
+.active {
+ padding-left:15px;
+ padding-right:15px;
+ background-color:#e7e7e7;
+}
+
+nav a:hover {
+ color:black;
+}
+
 
 nav form {
   padding: 0;
@@ -48,7 +68,6 @@ nav form {
 
 nav input {
   padding: 6px 12px 6px 5px;
- // font-size: 14px;
   color: #555;
   background-color: #fff;
   background-image: none;
@@ -63,19 +82,24 @@ nav input {
 }
 
 nav button {
- // margin-top:7px;
-  //padding-bottom:50px;
-  //display: inline;
   color: #333;
   background-color: #fff;
   border-color: #ccc;
   border-radius: 4px;
- // width:45px;
-  //height:34px;
-
 }
 
 
+.logo {
+	background:url(../img/rsz_icon2.png) left center no-repeat ; 
+	color:#e7e7e7;
+	padding: 22px 0 15px 60px;
+	font-family:Serif;
+	font-size:18px;
+}
+
+.goButton {
+	margin-left:-2px;
+}
 .nav_menu {
  float:left; 
   margin-right:20px;
