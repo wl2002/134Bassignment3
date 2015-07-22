@@ -105,3 +105,30 @@ nav button {
   margin-left: auto;
 
 }
+
+/* Below is the CSS for main content under the nav bar */
+
+
+/*#columns { 
+	-webkit-column-count: 3; /* Chrome, Safari, Opera */
+    /*-moz-column-count: 3; /* Firefox */
+   /* column-count: 3;
+}*/
+
+#leftNav {
+  
+  float: left;
+  width: 300px;
+  margin-right: -1000px;
+  padding-top: 70px; /* extra space padding */
+  line-height: 2;
+}
+
+a {
+	text-decoration: none;
+	color: #337ab7
+}
+
+#leftNav ul {
+	list-style-type: none;
+}
