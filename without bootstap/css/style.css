@@ -173,10 +173,11 @@ nav button {
 }
 
 .nav > li > a {
-    //position:relative;
+    position:relative;
     display:block;
     padding: 10px 15px; 
-    color: rgba(51, 131, 201, 1)
+    color: rgba(51, 131, 201, 1);
+	text-decoration:none;
 }
 .nav > li > a:focus, .nav > li > a:hover {
     background-color: #eee;
