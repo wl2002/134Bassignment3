@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="HTML Reference Website" />
+    <meta name="author" content="PoweredByCoffee" />
+
+    <title>Powered By Coffee HTML Reference</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Add Icon for the Website -->
+    <link rel="shortcut icon" href="img/icon2.ico" />
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Add style to the section tag -->
+    <style>
+      section {padding-left:20px;}
+
+    </style>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#F0EFEF; box-shadow: 0px 3px 10px #888888;">
+      <div class="container" >
+        <div class="navbar-header" >
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img src="img/icon2.png" style="width:50px; height:50px; float:left;"/>
+          <a class="navbar-brand" href="#" style="font-family:Serif;">&lt; Powered By Coffee &gt;  HTML Reference</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li class="active">
+              <a href="#contact">Contact</a>
+            </li>
+            <li>
+              <a href="#Browsers">Browsers</a>
+            </li>
+            <li class="active">
+              <a href="#Tags">Tags</a>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-right" id="search" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search" />
+            </div>
+            <button type="submit" class="btn btn-default">Go</button>
+          </form>
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container" style="margin-top:30px;">
+
+      <!-- Page Header -->
+      <!-- <div class="row">
+            <div class="col-lg-12">
+                <h1 class ="page-header">HTML Reference
+                    <small>Secondary Text</small>
+                </h1>
+            </div>
+        </div> -->
+      <!-- /.row -->
+
+      <div class="row">
+        <div class="col-md-3">
+          <div class="span3 bs-docs-sidebar">
+            <ul class="nav nav-list bs-docs-sidenav">
+              <li class="list-group-item active" style=" box-shadow: 0px 5px 10px #888888;"> HTML category </li>
+              <li>
+                <a href="#dropdowns">
+                  <i class="icon-chevron-right"></i> Basic Elements
+                </a>
+              </li>
+              <li class="active">
+                <a href="#buttonGroups">
+                  <i class="icon-chevron-right"></i> Document Metadata
+                </a>
+              </li>
+              <li>
+                <a href="#buttonDropdowns">
+                  <i class="icon-chevron-right"></i> Content Sectioning
+                </a>
+              </li>
+              <li>
+                <a href="#navs">
+                  <i class="icon-chevron-right"></i> Text Conetent
+                </a>
+              </li>
+              <li>
+                <a href="#navbar">
+                  <i class="icon-chevron-right"></i> Inline Text Semantics
+                </a>
+              </li>
+              <li>
+                <a href="#breadcrumbs">
+                  <i class="icon-chevron-right"></i> Image and Multimedia
+                </a>
+              </li>
+              <li>
+                <a href="#pagination">
+                  <i class="icon-chevron-right"></i> Embeded Content
+                </a>
+              </li>
+              <li>
+                <a href="#labels-badges">
+                  <i class="icon-chevron-right"></i> Scripting
+                </a>
+              </li>
+              <li>
+                <a href="#typography">
+                  <i class="icon-chevron-right"></i> Edits
+                </a>
+              </li>
+              <li>
+                <a href="#thumbnails">
+                  <i class="icon-chevron-right"></i> Table Content
+                </a>
+              </li>
+              <li>
+                <a href="#alerts">
+                  <i class="icon-chevron-right"></i> Form
+                </a>
+              </li>
+              <li>
+                <a href="#progress">
+                  <i class="icon-chevron-right"></i> Interactive Elements
+                </a>
+              </li>
+              <li>
+                <a href="#media">
+                  <i class="icon-chevron-right"></i> Web Components
+                </a>
+              </li>
+              <li>
+                <a href="#misc">
+                  <i class="icon-chevron-right"></i> Obsolete and Deprecated Elements
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!--  <div class="col-md-3" id="columnBrowser"><h3>Navigation</h3>
+    <div class="row">
+      <h4> Browse tags by Browser</h4>
+      <br>
+      <a href="operatags.html">
+      <img src="img/opera_32x32.png" alt="Opera" />
+      <p> Opera</p>
+      </a>
+      
+      <br>
+      <a href="firefoxtags.html">
+      <img src="img/firefox_32x32.png" alt="Firefox" />
+      <p> Firefox</p>
+      </a>
+      
+      <br>
+      <a href="chrometags.html">
+      <img src="img/chrome_32x32.png" alt="Chrome" />
+      <p> Chrome </p>
+      </a>
+      
+      <br>
+      <a href="safaritags.html">
+      <img src="img/safari_32x32.png" alt="Safari" />
+      <p> Safari </p> </a>
+      
+      <br>
+      <a href="ietags.html">
+      <img src="img/internet-explorer_32x32.png" alt="Internet Explorer" />
+      <p> Internet Explorer </p> </a>
+      <br>
+      <a href="myStart.html#columnTags"> <p>Show All</p> </a>
+      
+    </div>	-->
+
+        <div style="overflow:auto; height:600px; width:auto;" >
+          <div class="col-md-12" id="columnTags">
+            <p class="list-group-item active" style=" box-shadow: 0px 5px 10px #888888;">&lt;Table&gt; Tag</p>
+            <!-- Projects Row -->
+
+
+            <!-- The Table Tag -->
+
+            <section>
+              <h3>Example 1</h3>
+
+              <p>Table with colgroup</p>
+              <table cellspacing="8" cellpadding="0" border="2" style="width:700px; background-color:#F0EFEF;">
+                <colgroup span="4" class="columns"></colgroup>
+                <tr>
+                  <th>Countries</th>
+                  <th>Capitals</th>
+                  <th>Population</th>
+                  <th>Language</th>
+                </tr>
+                <tr>
+                  <td>USA</td>
+                  <td>Washington D.C.</td>
+                  <td>309 million</td>
+                  <td>English</td>
+                </tr>
+                <tr>
+                  <td>Sweden</td>
+                  <td>Stockholm</td>
+                  <td>9 million</td>
+                  <td>Swedish</td>
+                </tr>
+
+              </table>
+            </section>
+
+            <section>
+              <h3>Example 2</h3>
+              <p>Simple table with caption</p>
+              <table border="2">
+                <caption>Awesome caption</caption>
+                <tr>
+                  <td>Awesome data</td>
+                </tr>
+              </table>
+            </section>
+
+            <section>
+              <h3>Description and Browser Support</h3>
+              <p>
+                The &lttable&gt tag defines an HTML table.<br />
+                An HTML table consists of the &lttable&gt element and one or more &lttr&gt, &ltth&gt, and &lttd&gt elements.<br />
+                The &lttr&gt element defines a table row, the &ltth&gt element defines a table header, and the &lttd&gt element defines a table cell.<br />
+                A more complex HTML table may also include &ltcaption&gt, &ltcol&gt, &ltcolgroup&gt, &ltthead&gt, &lttfoot&gt, and &lttbody&gt elements.<br />
+              </p>
+
+              <table border="2" bgcolor="#F0EFEF">
+                <tbody>
+                  <tr>
+                    <th style="width:20%;font-size:16px;text-align:left;">&nbsp;Element&nbsp;</th>
+                    <th style="width:16%;" title="Chrome">
+                      <img src="img/compatible_chrome.gif" />
+                    </th>
+                    <th style="width:16%;" title="Internet Explorer">
+                      <img src="img/compatible_ie.gif" />
+                    </th>
+                    <th style="width:16%;" title="Firefox">
+                      <img src="img/compatible_firefox.gif" />
+                    </th>
+                    <th style="width:16%;" title="Safari">
+                      <img src="img/compatible_safari.gif" />
+                    </th>
+                    <th style="width:16%;" title="Opera">
+                      <img src="img/compatible_opera.gif" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <td style="text-align:left;">&nbsp;&lt;table&gt;</td>
+                    <td>&nbsp;&nbsp;&nbsp;Yes&nbsp;&nbsp;&nbsp;</td>
+                    <td>&nbsp;&nbsp;&nbsp;Yes&nbsp;&nbsp;&nbsp;</td>
+                    <td>&nbsp;&nbsp;&nbsp;Yes&nbsp;&nbsp;&nbsp;</td>
+                    <td>&nbsp;&nbsp;&nbsp;Yes&nbsp;&nbsp;&nbsp;</td>
+                    <td>&nbsp;&nbsp;&nbsp;Yes&nbsp;&nbsp;&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </section>
+
+            <!-- / End of the Table tag-->
+
+
+          </div>
+        </div>
+        <br />
+        <br />
+        <br />
+
+        <hr />
+
+        <!-- Footer -->
+        <footer>
+          <div class="row">
+            <div class="col-lg-12">
+              <p>
+                Copyright &copy; 2015<a href="contactus.html"> PoweredByCoffee </a>
+              </p>
+            </div>
+          </div>
+          <!-- /.row -->
+        </footer>
+
+      </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+
+</html>
