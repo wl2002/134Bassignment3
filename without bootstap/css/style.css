@@ -255,8 +255,19 @@ Will had to take this out for the text to fit
 	-webkit-column-count: 3; /* Chrome, Safari, Opera */
     -moz-column-count: 3; /* Firefox */
     column-count: 3;
+	-webkit-column-width:15%;
+	-moz-column-width:15%;
 	column-width: 15%;
+	
+	-webkit-column-gap:3%;
+	-moz-column-gap:3%;
 	column-gap: 3%;
+	clear: both;
+	
+}
+
+.firstItem {
+	margin-top: -6%;
 }
 
 #columnContainer {
