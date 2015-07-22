@@ -119,9 +119,11 @@ nav button {
     width: 18.75%; 
     float: left;
 }
+/* Will changing 
+--------
 .three-column{
     width: 18.75%;
-}
+} */
 
 #main_content{
     margin: 0px 0 25px 0;
@@ -174,10 +176,14 @@ nav button {
     font-size: large;
 }
 
+
+/*
+Will had to take this out for the text to fit
+------
 .row {
   margin-right: -15px;
   margin-left: -15px;
-}
+} */
 
 
 .text-center {
@@ -244,29 +250,20 @@ nav button {
 
 /* Will's css style */
 
-/* Below is the CSS for main content under the nav bar */
-
-
-/*#columns { 
+.columnTags{
+	/* width: 56.25%; */
 	-webkit-column-count: 3; /* Chrome, Safari, Opera */
-    /*-moz-column-count: 3; /* Firefox */
-   /* column-count: 3;
-}*/
-
-#leftNav {
-  
-  float: left;
-  width: 300px;
-  margin-right: -1000px;
-  padding-top: 70px; /* extra space padding */
-  line-height: 2;
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+	column-width: 15%;
+	column-gap: 3%;
 }
 
-a {
-	text-decoration: none;
-	color: #337ab7
+#columnContainer {
+	height: 35%;
+	width: auto;
+	overflow:auto;
+	background-color:aquamarine;
 }
-
-#leftNav ul {
-	list-style-type: none;
-}
+	
+/* Removed left nav bar for Milad's */
