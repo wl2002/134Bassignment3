@@ -110,7 +110,7 @@ nav button {
   line-height: 51px;
 }
 
-#container_out { 
+#outer_container { 
 	height: auto;
     margin-top: 30px;
 	margin-left: auto;
@@ -121,14 +121,14 @@ nav button {
 }
 
 
-#one {
+#inner_left_container {
   height:auto;
   float:left; 
   margin-right:20px;
   width:260px;
    
   }
-#two {
+#inner_right_container {
   overflow:hidden;
   margin:0px;
  }
