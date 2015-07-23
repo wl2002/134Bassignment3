@@ -73,7 +73,8 @@ nav ul {
 nav li {
     font-size:15px;
 	display: inline;
-	margin-left:20px;
+	padding-left:15px;
+	padding-right:15px;
 }
 
 nav a {
@@ -85,9 +86,8 @@ nav a {
 }
 
 .active {
-	padding-top:2px;
-	padding-left:15px;
-	padding-right:15px;
+	padding-top:19px;
+	padding-bottom:17px;
 	background-color:#e7e7e7;
 }
 
@@ -162,6 +162,7 @@ nav input {
 #inner_right_container {
 	overflow:hidden;
 	margin:0px;
+	width:800px;
 }
 
 /* END OF nav bar css style */
