@@ -124,7 +124,8 @@ nav input {
 }
 
 .goButton {
-    width:50px; height:50px
+    width:50px; 
+    height:50px;
     padding: 5px 15px 10px 5px;
 	background-color:white;
 	-webkit-border-radius: 6px;
@@ -303,11 +304,11 @@ nav input {
 	column-count: 3;
 	-webkit-column-width:15%;
 	-moz-column-width:15%;
-	column-width: 15%;
+	/* column-width: 15%; */
 	
 	-webkit-column-gap:3%;
 	-moz-column-gap:3%;
-	column-gap: 0%;
+	/* column-gap: 0%; */
 	clear: both;
 }
 
