@@ -45,7 +45,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <img src="img/icon2.png" style="width:50px; height:50px; float:left;"/>
+          <img src="img/icon2.png" style="width:50px; height:50px; float:left;" alt="PoweredByCoffee Logo" />
           <a class="navbar-brand" href="#" style="font-family:Serif;">&lt; Powered By Coffee &gt;  HTML Reference</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -213,18 +213,39 @@
             <!-- The Table Tag -->
 
             <section>
-              <h3>Example 1</h3>
+              <h3>Example</h3>
+                <h4>Code:</h4>
+<pre style="font-size: 9pt">
+&lt;table style="border: solid 1px black; width:100%; background-color: #F0EFEF;"&gt;
+    &lt;tr style="border: solid 1px black;"&gt;
+        &lt;th&gt;Countries&lt;/th&gt;
+        &lt;th&gt;Capitals&lt;/th&gt;
+        &lt;th&gt;Population&lt;/th&gt;
+        &lt;th&gt;Language&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr style="border: solid 1px black;"&gt;
+        &lt;td&gt;USA&lt;/td&gt;
+        &lt;td&gt;Washington D.C.&lt;/td&gt;
+        &lt;td&gt;309 million&lt;/td&gt;
+        &lt;td&gt;English&lt;/td&gt;
+    &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;Sweden&lt;/td&gt;
+        &lt;td&gt;Stockholm&lt;/td&gt;
+        &lt;td&gt;9 million&lt;/td&gt;
+        &lt;td&gt;Swedish&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</pre>
 
-              <p>Table with colgroup</p>
-              <table cellspacing="8" cellpadding="0" border="2" style="width:700px; background-color:#F0EFEF;">
-                <colgroup span="4" class="columns"></colgroup>
-                <tr>
+                <h4>Result:</h4>
+              <table style="border: solid 1px black; width:100%; background-color: #F0EFEF;">
+                <tr style="border: solid 1px black;">
                   <th>Countries</th>
                   <th>Capitals</th>
                   <th>Population</th>
                   <th>Language</th>
                 </tr>
-                <tr>
+                <tr style="border: solid 1px black;">
                   <td>USA</td>
                   <td>Washington D.C.</td>
                   <td>309 million</td>
@@ -236,48 +257,37 @@
                   <td>9 million</td>
                   <td>Swedish</td>
                 </tr>
-
               </table>
             </section>
 
             <section>
-              <h3>Example 2</h3>
-              <p>Simple table with caption</p>
-              <table border="2">
-                <caption>Awesome caption</caption>
-                <tr>
-                  <td>Awesome data</td>
-                </tr>
-              </table>
-            </section>
-
-            <section>
-              <h3>Description and Browser Support</h3>
+              <h3>Description</h3>
               <p>
-                The &lttable&gt tag defines an HTML table.<br />
-                An HTML table consists of the &lttable&gt element and one or more &lttr&gt, &ltth&gt, and &lttd&gt elements.<br />
-                The &lttr&gt element defines a table row, the &ltth&gt element defines a table header, and the &lttd&gt element defines a table cell.<br />
-                A more complex HTML table may also include &ltcaption&gt, &ltcol&gt, &ltcolgroup&gt, &ltthead&gt, &lttfoot&gt, and &lttbody&gt elements.<br />
+                The &lt;table&gt; tag defines an HTML table.<br />
+                An HTML table consists of the &lt;table&gt; element and one or more &lt;tr&gt;, &lt;th&gt;, and &lt;td&gt; elements.<br />
+                The &lt;tr&gt; element defines a table row, the &lt;th&gt; element defines a table header, and the &lt;td&gt; element defines a table cell.<br />
+                A more complex HTML table may also include &lt;caption&gt;, &lt;col&gt;, &lt;colgroup&gt;, &lt;thead&gt;, &lt;tfoot&gt;, and &lt;tbody&gt; elements.
               </p>
 
-              <table border="2" bgcolor="#F0EFEF">
+			  <h3>Browser Support</h3>
+              <table style="border: solid 1px black; background-color: #F0EFEF">
                 <tbody>
-                  <tr>
+                  <tr style="border: solid 1px black">
                     <th style="width:20%;font-size:16px;text-align:left;">&nbsp;Element&nbsp;</th>
                     <th style="width:16%;" title="Chrome">
-                      <img src="img/compatible_chrome.gif" />
+                      <img src="img/compatible_chrome.gif" alt="Chrome Browser" />
                     </th>
                     <th style="width:16%;" title="Internet Explorer">
-                      <img src="img/compatible_ie.gif" />
+                      <img src="img/compatible_ie.gif" alt="Internet Explorer Browser" />
                     </th>
                     <th style="width:16%;" title="Firefox">
-                      <img src="img/compatible_firefox.gif" />
+                      <img src="img/compatible_firefox.gif" alt="Firefox Browser" />
                     </th>
                     <th style="width:16%;" title="Safari">
-                      <img src="img/compatible_safari.gif" />
+                      <img src="img/compatible_safari.gif" alt="Safari Browser" />
                     </th>
                     <th style="width:16%;" title="Opera">
-                      <img src="img/compatible_opera.gif" />
+                      <img src="img/compatible_opera.gif" alt="Opera Browser" />
                     </th>
                   </tr>
                   <tr>
