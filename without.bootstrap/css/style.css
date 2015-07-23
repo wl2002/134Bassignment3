@@ -174,15 +174,6 @@ nav input {
     float: left;
 }
 
-.three-column{
-	height:80px;
-} 
-
-#main_content{
-    margin: 0px 0 25px 0;
-    padding: 30px;
-    width: 855px;
-}
 .nav > li {
     position:relative;
     display:block;
@@ -217,29 +208,10 @@ nav input {
     color: rgba(51, 131, 201, 1)
 }
 
-#bs-example-navbar-collapse-1 {
-    height: 50px;
-    background-color: #0478c4;
-    padding-left: 75%; 
-    margin-top: 30px;
-    display: inline;
-}
-
 #topNav a{
     color: #fff;
     font-size: large;
 }
-
-.row {
-	width: 960px;
-	height: 100%;
- 
-	padding: 110px 0 70px 0;
-	margin-right: auto;
-	margin-left: auto;
-	background-color:red;
-}
-
 
 .text-center {
 	text-align: center;
@@ -311,6 +283,11 @@ nav input {
 	/* column-gap: 0%; */
 	clear: both;
 }
+
+.three-column{
+	height:80px;
+	font-size:15px;
+} 
 
 .firstItem {
 	margin-top: -6%;
