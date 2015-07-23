@@ -1,22 +1,28 @@
+/*
+ * File name: style.css
+ * Team name: Powered By Coffee
+ * CSE 134b 
+ * HW 3
+ *
+ */
+
 body {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 14px;
-  background-color: #fff;
-  width:100%;
-  height:100%;
-  margin: 0;
-  padding: 0;
-  }
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	background-color: #fff;
+	width:100%;
+	height:100%;
+	margin: 0;
+	padding: 0;
+}
 
 header {
 	height: 51px;
 	width:100%;
-    background-color: #F0EFEF;
-	
+    background-color: #F0EFEF;	
 }
 
 hr {
-   
     margin-top:20px;
     margin-bottom:20px;
     border:0;
@@ -24,29 +30,26 @@ hr {
 }
 
 pre {
-  display: block;
-  padding: 9.5px;
-  margin: 0 0 10px;
-  font-size: 13px;
-  line-height: 1.4;
-  color: #333;
-  word-break: break-all;
-  word-wrap: break-word;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-
+	display: block;
+	padding: 9.5px;
+	margin: 0 0 10px;
+	font-size: 13px;
+	line-height: 1.4;
+	color: #333;
+	word-break: break-all;
+	word-wrap: break-word;
+	background-color: #f5f5f5;
+	border: 1px solid #ccc;
+	border-radius: 4px;
 }
 
 a {
-  text-decoration:none;
+	text-decoration:none;
 }
-
 
 /* nav bar css style */
 
 nav {
-
     display: inline;
 	position:fixed;
 	height: 51px;
@@ -58,6 +61,7 @@ nav {
     border: 1px solid transparent;
 	box-shadow: 0px 3px 10px #888888;
 }
+
 nav ul {
 	padding: 0;
 	margin: 0;
@@ -65,11 +69,13 @@ nav ul {
 	text-align: center;
     line-height: 51px;
 }
+
 nav li {
-   font-size:15px;
+    font-size:15px;
 	display: inline;
 	margin-left:20px;
 }
+
 nav a {
 	color:#888889;
 	display: inline-block;
@@ -79,40 +85,35 @@ nav a {
 }
 
 .active {
-   padding-top:2px;
-   padding-left:15px;
-   padding-right:15px;
-   background-color:#e7e7e7;
+	padding-top:2px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color:#e7e7e7;
 }
 
 nav a:hover {
-  color:black;
+    color:black;
 }
 
-
 nav form {
-  padding: 0;
+    padding: 0;
 	margin: 0;
 	font-size: 14px;
  }
 
 nav input {
-  padding: 6px 12px 6px 5px;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-
+	padding: 6px 12px 6px 5px;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
-
-
-
 
 .logo {
 	background:url(../img/rsz_icon2.png) left center no-repeat ; 
@@ -134,13 +135,13 @@ nav input {
 	-webkit-box-shadow: inset 0 0 20px #333;
 	box-shadow:inset 0 0 5px #333;
 }
+
 .nav_menu {
- float:left; 
-  margin-right:20px;
-  width:100%;
-  width:auto;
-  //background-color:yellow;
-  line-height: 51px;
+	float:left; 
+	margin-right:20px;
+	width:100%;
+	width:auto;
+	line-height: 51px;
 }
 
 .outer_container { 
@@ -149,41 +150,32 @@ nav input {
 	margin-left: auto;
 	margin-right: auto;
 	width: 1100px;
-	//background-color:yellow;
-	
 }
 
-
 #inner_left_container {
-  height:auto;
-  float:left; 
-  margin-right:20px;
-  width:270px;
-   
-  }
+	height:auto;
+	float:left; 
+	margin-right:20px;
+	width:270px;
+}
+
 #inner_right_container {
-  overflow:hidden;
-  margin:0px;
- }
-
-
+	overflow:hidden;
+	margin:0px;
+}
 
 /* END OF nav bar css style */
 
+/* left nav bar */
 
-/* milad's css style */
 .leftNav {
     width: 18.75%; 
     float: left;
 }
 
-/*.three-column{
-
-
 .three-column{
-
-  padding-top:20px;
-} */
+	height:80px;
+} 
 
 #main_content{
     margin: 0px 0 25px 0;
@@ -235,90 +227,80 @@ nav input {
 #topNav a{
     color: #fff;
     font-size: large;
-
 }
 
 .row {
-    width: 960px;
+	width: 960px;
 	height: 100%;
  
-    padding: 110px 0 70px 0;
-  margin-right: auto;
-  margin-left: auto;
-  background-color:red;
+	padding: 110px 0 70px 0;
+	margin-right: auto;
+	margin-left: auto;
+	background-color:red;
 }
 
 
 .text-center {
-  text-align: center;
+	text-align: center;
 }
 
 .page-number {
-  display: inline-block;
-  padding-left: 0;
-  margin: 20px 0;
-  border-radius: 4px;
-  
+	display: inline-block;
+	padding-left: 0;
+	margin: 20px 0;
+	border-radius: 4px;
 }
 
-.max-width{
-   margin-left:auto;
-   margin-right:auto;
-	   min-width:50%;
-	   max-width:100%;
-
-    
-}
 .page-number > li {
   display: inline;
 }
+
 #left-arrow {
     border-top-left-radius:4px;
     border-bottom-left-radius:4px;
     margin-left: 0;
-} 
+}
+ 
 #right-arrow {
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 }
+
 .page-number > li > a,
 .page-number > li > span {
-  position: relative;
-  float: left;
-  padding: 6px 12px;
-  margin-left: -1px;
-  line-height: 1.42857143;
-  color: #337ab7;
-  text-decoration: none;
-  background-color: #fff;
-  border: 1px solid #ddd;
+	position: relative;
+	float: left;
+	padding: 6px 12px;
+	margin-left: -1px;
+	line-height: 1.42857143;
+	color: #337ab7;
+	text-decoration: none;
+	background-color: #fff;
+	border: 1px solid #ddd;
 }
 
 .page-number > li > a:hover,
 .page-number > li > span:hover{
-  color: #23527c;
-  background-color: #eee;
-  border-color: #ddd;
+	color: #23527c;
+	background-color: #eee;
+	border-color: #ddd;
 }  
  
 .page-number > .active > a,
 .page-number > .active > span {
-  z-index: 2;
-  color: #fff;
-  cursor: default;
-  background-color: #337ab7;
-  border-color: #337ab7;
+	z-index: 2;
+	color: #fff;
+	cursor: default;
+	background-color: #337ab7;
+	border-color: #337ab7;
 }
 
-
-
-/* Will's css style */
+/* 3 Columns in the inner_right_container */
 
 .columnTags{
-	/* width: 56.25%; */
 	-webkit-column-count: 3; /* Chrome, Safari, Opera */
-    -moz-column-count: 3; /* Firefox */
-    column-count: 3;
+	-moz-column-count: 3; /* Firefox */
+	column-count: 3;
 	-webkit-column-width:15%;
 	-moz-column-width:15%;
 	column-width: 15%;
@@ -327,7 +309,6 @@ nav input {
 	-moz-column-gap:3%;
 	column-gap: 0%;
 	clear: both;
-	
 }
 
 .firstItem {
@@ -338,7 +319,5 @@ nav input {
 	height: 600px;
 	width: auto;
 	overflow:auto;
-	
 }
 	
-/* Removed left nav bar for Milad's */
