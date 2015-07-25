@@ -17,9 +17,9 @@ body {
 }
 
 header {
-	height: 51px;
+	min-height: 51px;
 	width:100%;
-    background-color: #F0EFEF;	
+    background-color: #F0EFEF;	height:auto;
 }
 
 hr {
@@ -50,9 +50,11 @@ a {
 /* nav bar css style */
 
 nav {
+float:jusitfy;
     display: inline;
 	position:fixed;
-	height: 51px;
+	min-height: 51px;
+	height:auto;
 	width:100%;
 	background-color: #F0EFEF;
 	border-color: #e7e7e7;
@@ -65,7 +67,7 @@ nav {
 nav ul {
 	padding: 0;
 	margin: 0;
-	height: 40px;
+	//height: 40px;
 	text-align: center;
     line-height: 51px;
 }
@@ -103,6 +105,7 @@ nav form {
 
 nav input {
 	padding: 6px 12px 6px 5px;
+	width:auto;
 	color: #555;
 	background-color: #fff;
 	background-image: none;
@@ -141,7 +144,7 @@ nav input {
 	height: auto;
 	margin-left: auto;
 	margin-right: auto;
-	width: 1300px;
+	width: auto;
 }
 
 .outer_container { 
@@ -149,21 +152,24 @@ nav input {
     margin-top: 30px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 1100px;
+	width:auto;
+
 }
 
 #inner_left_container {
 	height:auto;
 	float:left; 
 	margin-right:20px;
-	width:270px;
+	width:auto;
+	min-width:60px;
 }
 
 #inner_right_container {
 	overflow:hidden;
 	margin:0px;
-	width:800px;
-}
+	width:auto;
+	min-width:400px;
+	}
 
 /* END OF nav bar css style */
 
@@ -189,6 +195,8 @@ nav input {
     color: white;
 }
 .nav {
+
+    float:left;
     padding-left: 0;
     margin-bottom: 0;
     padding-right:15px;
