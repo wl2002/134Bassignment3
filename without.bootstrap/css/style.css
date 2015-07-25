@@ -16,10 +16,19 @@ body {
 	padding: 0;
 }
 
+
 header {
 	min-height: 51px;
 	width:100%;
-    background-color: #F0EFEF;	height:auto;
+    background-color: #F0EFEF;	
+	height:auto;
+	margin-bottom:30px; 
+}
+
+@media (max-width: 910px) {
+	header {
+		margin-bottom:60px; 
+    }
 }
 
 hr {
@@ -50,7 +59,7 @@ a {
 /* nav bar css style */
 
 nav {
-float:jusitfy;
+    float:jusitfy;
     display: inline;
 	position:fixed;
 	min-height: 51px;
@@ -67,7 +76,6 @@ float:jusitfy;
 nav ul {
 	padding: 0;
 	margin: 0;
-	//height: 40px;
 	text-align: center;
     line-height: 51px;
 }
@@ -145,16 +153,24 @@ nav input {
 	margin-left: auto;
 	margin-right: auto;
 	width: auto;
+
 }
 
 .outer_container { 
 	height: auto;
-    margin-top: 30px;
 	margin-left: auto;
 	margin-right: auto;
 	width:auto;
 
 }
+
+/*
+@media (max-width: 400px) {
+	#inner_left_container {
+		display:none; 
+    }
+}
+*/
 
 #inner_left_container {
 	height:auto;
