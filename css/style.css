@@ -7,13 +7,9 @@
  */
 
 body {
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-	font-size: 14px;
-	background-color: #fff;
-	width:100%;
-	height:100%;
-	margin: 0;
-	padding: 0;
+    margin: 0px auto; 
+    padding: 0;
+    width: 100%;
 }
 
 
@@ -25,9 +21,13 @@ header {
 	margin-bottom:30px; 
 }
 
+section {
+	padding-left:10px;
+}
 
 table {
-    width:100%;
+    width:98%;
+	margin-left:10px;
 }
 table, th, td {
     border: 1px solid black;
@@ -178,24 +178,17 @@ nav input {
 	margin-left: auto;
 	margin-right: auto;
 	width: auto;
-
 }
 
-.outer_container { 
-	height: auto;
+.outer_container {
 	margin-left: auto;
 	margin-right: auto;
-	width:auto;
-
+	width: 75%;
+	max-width: 1200px;
+	height: auto;
+	overflow: auto;
 }
 
-/*
-@media (max-width: 400px) {
-	#inner_left_container {
-		display:none; 
-    }
-}
-*/
 
 #inner_left_container {
 	height:auto;
