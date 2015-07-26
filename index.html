@@ -10,14 +10,13 @@
     <meta name="author" content="PoweredByCoffee" />
 
     <title>Powered By Coffee HTML Reference</title>
-
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
+    <script src="js/search.js" type="text/javascript"></script>
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
     <!-- Add Icon for the Website -->
     <link rel="shortcut icon" href="img/icon2.ico" />
-
-    <!-- Custom CSS -->
-    <link href="css/3-col-portfolio.css" rel="stylesheet" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,26 +26,19 @@
     <![endif]-->
 
   </head>
-
   <body>
 
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#F0EFEF; box-shadow: 0px 3px 10px #888888;">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <img src="img/icon2.png" style="width:50px; height:50px; float:left;" alt="Coffee"/>
-          <a class="navbar-brand" href="#" style="font-family:Serif;">&lt; Powered By Coffee &gt;  HTML Reference</a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
+
+    <header>
+      <nav>
+        <div class="nav_container">
+          <ul>
+            <li class="logo">
+              <a href="#">&lt; Powered By Coffee &gt;HTML Reference</a>
+            </li>
             <li class="active">
-              <a href="index.html">Home</a>
+              <a style="margin-left:5px;" href="index.html">Home</a>
             </li>
             <li>
               <a href="about.html">About</a>
@@ -54,1212 +46,1243 @@
             <li>
               <a href="contact.html">Contact</a>
             </li>
+            <li>
+              <input style="margin-left:30px;" type="text" id="s_tagName" placeholder="Search" />
+              <button class="goButton" value="submit" onclick="search_tag()"> Go </button>
+            </li>
           </ul>
-          <form class="navbar-form navbar-right" id="search" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search" />
-            </div>
-            <button type="submit" class="btn btn-default">Go</button>
-          </form>
         </div>
         <!--/.nav-collapse -->
+      </nav>
+    </header>
+
+    <!-- /.row -->
+    <div class="outer_container">
+      <div id="inner_left_container">
+        <ul class="nav">
+          <li class="top-label" style="box-shadow: 0px 3px 10px #888888;"> HTML category </li>
+          <li>
+            <a href="basic.html">
+              Basic Elements
+            </a>
+          </li>
+          <li>
+            <a href="document.html">
+              Document Metadata
+            </a>
+          </li>
+          <li>
+            <a href="sectioning.html">
+              Content Sectioning
+            </a>
+          </li>
+          <li>
+            <a href="textcontent.html">
+              Text Content
+            </a>
+          </li>
+          <li>
+            <a href="semantics.html">
+              Inline Text Semantics
+            </a>
+          </li>
+          <li>
+            <a href="multimedia.html">
+              Image and Multimedia
+            </a>
+          </li>
+          <li>
+            <a href="embedded.html">
+              Embedded Content
+            </a>
+          </li>
+          <li>
+            <a href="scripting.html">
+              Scripting
+            </a>
+          </li>
+          <li>
+            <a href="edits.html">
+              Edits
+            </a>
+          </li>
+          <li>
+            <a href="tablecontent.html">
+              Table Content
+            </a>
+          </li>
+          <li>
+            <a href="form.html">
+              Form
+            </a>
+          </li>
+          <li>
+            <a href="interactive.html">
+              Interactive Elements
+            </a>
+          </li>
+          <li>
+            <a href="webcomponents.html">
+              Web Components
+            </a>
+          </li>
+          <li>
+            <a href="deprecated.html">
+              Obsolete and Deprecated Elements
+            </a>
+          </li>
+        </ul>
       </div>
-    </nav>
 
-    <!-- Page Content -->
-    <div class="container" style="margin-top:30px;">
+      <div id="inner_right_container">
 
+        <div id="columnContainer" >
+
+          <p class="top-label" style="box-shadow: 0px 3px 10px #888888;">All HTML Tags</p>
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;!--...--&gt;</a>
+              </h3>
+              <p> Defines a comment</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;!DOCTYPE&gt;</a>
+              </h3>
+              <p>Defines document type.</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a id="A" href="#">&lt;a&gt;</a>
+              </h3>
+              <p>Defines a hyperlink</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;abbr&gt;</a>
+              </h3>
+              <p>Defines an abbreviation </p>
+              <br>
+            
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;acronym&gt;</a>
+              </h3>
+              <p>Defines an acronym</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;address&gt;</a>
+              </h3>
+              <p>Defines contact information for the author</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;applet&gt;</a>
+              </h3>
+              <p>Defines an embedded applet</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;area&gt;</a>
+              </h3>
+              <p>Defines an area inside an image-map</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;article&gt;</a>
+              </h3>
+              <p>Defines an article</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;aside&gt;</a>
+              </h3>
+              <p> Defines content aside from the page content</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;audio&gt;</a>
+              </h3>
+              <p>Defines sound content</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a id="B" href="#">&lt;b&gt;</a>
+              </h3>
+              <p>Defines bold text</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;base&gt;</a>
+              </h3>
+              <p> specifies the base URL/target for all relative URLs in a document </p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;basefront&gt;</a>
+              </h3>
+              <p>Specifies the base URL/target for all relative URLs in a document</p>
+              <br>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;bdi&gt;</a>
+              </h3>
+              <p>Isolates a part of text that might be formatted in a different direction from other text outside it</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;bdo&gt;</a>
+              </h3>
+              <p>Overrides the current text direction</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;big&gt;</a>
+              </h3>
+              <p>Defines big text</p>
+              <br />
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;blockquote&gt;</a>
+              </h3>
+              <p>Defines a section that is quoted from another source</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;body&gt;</a>
+              </h3>
+              <p>Defines a section that is quoted from another source</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;br&gt;</a>
+              </h3>
+              <p>Defines a single line break</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;button&gt;</a>
+              </h3>
+              <p>Defines a clickable button</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a id="C" href="#">&lt;canvas&gt;</a>
+              </h3>
+              <p>Used to draw graphics</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;caption&gt;</a>
+              </h3>
+              <p>Defines a table caption</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;center&gt;</a>
+              </h3>
+              <p>Defines centered text</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;cite&gt;</a>
+              </h3>
+              <p>Defines the title of a work</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;code&gt;</a>
+              </h3>
+              <p>Defines a piece of computer code</p>
+              <br />
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;col&gt;</a>
+              </h3>
+              <p>Specifies column properties for each column</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;colgroup&gt;</a>
+              </h3>
+              <p>Specifies a group of one or more columns in a table for formatting</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a id="D" href="#">&lt;datalist&gt;</a>
+              </h3>
+              <p>Specifies a list of pre-defined options for input controls</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;dd&gt;</a>
+              </h3>
+              <p>Defines a description/value of a term in a description list</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;del&gt;</a>
+              </h3>
+              <p>Defines text that has been deleted from a document</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;details&gt;</a>
+              </h3>
+              <p>Defines additional details that the user can view or hide</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;dfn&gt;</a>
+              </h3>
+              <p>Represents the defining instance of a term</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;dialog&gt;</a>
+              </h3>
+              <p>Defines a dialog box or window</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;dir&gt;</a>
+              </h3>
+              <p>Defines a directory list</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;div&gt;</a>
+              </h3>
+              <p>Defines a section in a document</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;dl&gt;</a>
+              </h3>
+              <p>Defines a description list</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;dt&gt;</a>
+              </h3>
+              <p>Defines a term/name in a description list</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a id="E" href="#">&lt;em&gt;</a>
+              </h3>
+              <p>Defines emphasized text</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;embed&gt;</a>
+              </h3>
+              <p> Defines a container for an external (non-HTML) application</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a id="F" href="#">&lt;fieldset&gt;</a>
+              </h3>
+              <p>Groups related elements in a form</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;figcaption&gt;</a>
+              </h3>
+              <p>Defines a caption for a figure element</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;figure&gt;</a>
+              </h3>
+              <p>Specifies self-contained content</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;font&gt;</a>
+              </h3>
+              <p>Defines font, color, and size for text</p>
+              <br />
+
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;footer&gt;</a>
+              </h3>
+              <p>Defines a footer for a document or section</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;form&gt;</a>
+              </h3>
+              <p>Defines an HTML form for user input</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;frame&gt;</a>
+              </h3>
+              <p>Defines a window in a frameset</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;frameset&gt;</a>
+              </h3>
+              <p>Defines a set of frames</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a id="H" href="#">&lt;h1&gt; to &lt;h6&gt;</a>
+              </h3>
+              <p>Defines html headings</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;head&gt;</a>
+              </h3>
+              <p>Defines information about the document</p>
+              <br>
+            
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;header&gt;</a>
+              </h3>
+              <p>Defines a header for a document or section</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;hr&gt;</a>
+              </h3>
+              <p>Defines a thematic change in the content</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;html&gt;</a>
+              </h3>
+              <p>Defines the root of an HTML document</p>
+              <br>
+            
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a id="I" href="#">&lt;i&gt;</a>
+              </h3>
+              <p>Defines a part of text in an alternate voice or mood</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;iframe&gt;</a>
+              </h3>
+              <p>Specifies an inline sub window (frame)</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;img&gt;</a>
+              </h3>
+              <p>Specifies an image</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;input&gt;</a>
+              </h3>
+              <p>Defines an input control</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;ins&gt;</a>
+              </h3>
+              <p>Defines a text that has been inserted into a document</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a id="K" href="#">&lt;kbd&gt;</a>
+              </h3>
+              <p>Defines keyboard input</p>
+              <br>
+            
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;keygen&gt;</a>
+              </h3>
+              <p>Defines a key-pair generator field (for forms)</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a id="L" href="#">&lt;label&gt;</a>
+              </h3>
+              <p>Defines a label for an element</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;legend&gt;</a>
+              </h3>
+              <p>Defines a caption for a fieldset element</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;li&gt;</a>
+              </h3>
+              <p>Defines a list item</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;link&gt;</a>
+              </h3>
+              <p>Defines the relationship between a document and an external resource </p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a id="M" href="#">&lt;main&gt;</a>
+              </h3>
+              <p>Specifies the main content of a document</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;map&gt;</a>
+              </h3>
+              <p>Defines a client-side image-map</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;mark&gt;</a>
+              </h3>
+              <p>Defines marked/highlighted text</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;menu&gt;</a>
+              </h3>
+              <p>Defines a list/menu of commands</p>
+              <br>
+            
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;menuitem&gt;</a>
+              </h3>
+              <p>Defines a command/menu item that the user can invoke from a popup menu</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;meta&gt;</a>
+              </h3>
+              <p>Defines metadata about an HTML document</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;meter&gt;</a>
+              </h3>
+              <p>Defines a scalar measurement within a known range (a gauge)</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a id="N" href="#">&lt;nav&gt;</a>
+              </h3>
+              <p>Defines navigation links</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;noframes&gt;</a>
+              </h3>
+              <p>Defines an alternate content for users that do not support frames</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;noscript&gt;</a>
+              </h3>
+              <p>Defines an alternate content for users that do not support client-side scripts</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a id="O" href="#">&lt;object&gt;</a>
+              </h3>
+              <p>Defines an embedded object</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;ol&gt;</a>
+              </h3>
+              <p>Defines an ordered list</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;optgroup&gt;</a>
+              </h3>
+              <p>Defines a group of related options in a drop-down list</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;option&gt;</a>
+              </h3>
+              <p>Defines an option in a drop-down list</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;output&gt;</a>
+              </h3>
+              <p>Defines the result of a calculation</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a id="P" href="#">&lt;p&gt;</a>
+              </h3>
+              <p>Defines a paragraph</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;param&gt;</a>
+              </h3>
+              <p>Defines a parameter for an object</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;pre&gt;</a>
+              </h3>
+              <p>Defines preformatted text</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;progress&gt;</a>
+              </h3>
+              <p>Represents the progress of a task</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a id="Q" href="#">&lt;q&gt;</a>
+              </h3>
+              <p>Defines a short quotation</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;rp&gt;</a>
+              </h3>
+              <p>Defines what to show in browsers that do not support ruby annotations</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a id="R" href="#">&lt;rt&gt;</a>
+              </h3>
+              <p>Defines an explanation/pronunciation of characters (for East Asian typography)</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;ruby&gt;</a>
+              </h3>
+              <p>Defines a ruby annotation</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a id="S" href="#">&lt;s&gt;</a>
+              </h3>
+              <p>Defines text that is no longer correct</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;samp&gt;</a>
+              </h3>
+              <p>Defines sample output from a computer program</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;script&gt;</a>
+              </h3>
+              <p>Defines a client-side script</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;section&gt;</a>
+              </h3>
+              <p>Specifies a section</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;select&gt;</a>
+              </h3>
+              <p>Specifies a selectable list</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;small&gt;</a>
+              </h3>
+              <p>Defines small text</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;source&gt;</a>
+              </h3>
+              <p>specifies media resources</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;span&gt;</a>
+              </h3>
+              <p>Specifies a section in a document</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;strong&gt;</a>
+              </h3>
+              <p>Defines strong text</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;style&gt;</a>
+              </h3>
+              <p>Specifies a style definition</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;sub&gt;</a>
+              </h3>
+              <p>Specifies subscripted text</p>
+              <br>
+            
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;summary&gt;</a>
+              </h3>
+              <p>Specifies a summary / caption for the details element</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;sup&gt;</a>
+              </h3>
+              <p>Defines superscripted text</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a id="T" href="#">&lt;table&gt;</a>
+              </h3>
+              <p>Specifies a table</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;tbody&gt;</a>
+              </h3>
+              <p>Specifies a table body</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;td&gt;</a>
+              </h3>
+              <p>Defines a table cell</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;template&gt;</a>
+              </h3>
+              <p>Declares HTML fragments that can be cloned & inserted by script.</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;textarea&gt;</a>
+              </h3>
+              <p>Defines a text area</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;tfoot&gt;</a>
+              </h3>
+              <p>Defines a table footer</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;th&gt;</a>
+              </h3>
+              <p>Defines a table header</p>
+              <br>
+            
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;thead&gt;</a>
+              </h3>
+              <p>Used to group header content in an html table</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;time&gt;</a>
+              </h3>
+              <p>Specifies a date/time</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;title&gt;</a>
+              </h3>
+              <p>Defines the document title</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a href="#">&lt;tr&gt;</a>
+              </h3>
+              <p>Defines a table row</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a href="#">&lt;track&gt;</a>
+              </h3>
+              <p>Specifies a text track for media such as video and audio</p>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;u&gt;</a>
+              </h3>
+              <p>Specifies text with a non-textual annotation.</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a id="U" href="#">&lt;ul&gt;</a>
+              </h3>
+              <p>Defines an unordered list</p>
+            </div>
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+          <div class="columnTags">
+            <!-- Projects Row -->
+            <div class="firstItem">
+              <h3>
+                <a id="V" href="#">&lt;var&gt;</a>
+              </h3>
+              <p>Defines a variable</p>
+              <br>
+            </div>
+            <div class="three-column">
+
+              <h3>
+                <a href="#">&lt;video&gt;</a>
+              </h3>
+              <p>Specifies a video</p>
+            </div>
+            <div class="three-column portfolio-item">
+
+              <h3>
+                <a id="W" href="#">&lt;wbr&gt;</a>
+              </h3>
+              <p>Specifies a line break opportunity for very long words and strings of text with no spaces.</p>
+            </div>
+
+            <!-- </div> -->
+            <!-- /.row -->
+          </div>
+          <!-- Ends column -->
+
+        </div>
+
+      </div>
       <!-- /.row -->
-
-      <div class="row">
-        <div class="col-md-3">
-          <div class="span3 bs-docs-sidebar">
-            <ul class="nav nav-list bs-docs-sidenav">
-              <li class="list-group-item active" style=" box-shadow: 0px 5px 10px #888888;"> HTML category </li>
-              <li>
-                <a href="404.html">
-                  <i class="icon-chevron-right"></i> Basic Elements
-                </a>
-              </li>
-              <li class="active">
-                <a href="404.html">
-                  <i class="icon-chevron-right"></i> Document Metadata
-                </a>
-              </li>
-              <li>
-                <a href="404.html">
-                  <i class="icon-chevron-right"></i> Content Sectioning
-                </a>
-              </li>
-              <li>
-                <a href="404.html">
-                  <i class="icon-chevron-right"></i> Text Content
-                </a>
-              </li>
-              <li>
-                <a href="404.html">
-                  <i class="icon-chevron-right"></i> Inline Text Semantics
-                </a>
-              </li>
-              <li>
-                <a href="404.html">
-                  <i class="icon-chevron-right"></i> Image and Multimedia
-                </a>
-              </li>
-              <li>
-                <a href="404.html">
-                  <i class="icon-chevron-right"></i> Embedded Content
-                </a>
-              </li>
-              <li>
-                <a href="404.html">
-                  <i class="icon-chevron-right"></i> Scripting
-                </a>
-              </li>
-              <li>
-                <a href="404.html">
-                  <i class="icon-chevron-right"></i> Edits
-                </a>
-              </li>
-              <li>
-                <a href="404.html">
-                  <i class="icon-chevron-right"></i> Table Content
-                </a>
-              </li>
-              <li>
-                <a href="404.html">
-                  <i class="icon-chevron-right"></i> Form
-                </a>
-              </li>
-              <li>
-                <a href="404.html">
-                  <i class="icon-chevron-right"></i> Interactive Elements
-                </a>
-              </li>
-              <li>
-                <a href="404.html">
-                  <i class="icon-chevron-right"></i> Web Components
-                </a>
-              </li>
-              <li>
-                <a href="404.html">
-                  <i class="icon-chevron-right"></i> Obsolete and Deprecated Elements
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div style="overflow:auto; height:600px; width:auto;" >
-          <div class="col-md-12" id="columnTags">
-            <p class="list-group-item active" style=" box-shadow: 0px 5px 10px #888888;">All HTML Tags</p>
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4">
-                <h3>
-                  <a href="#">&lt;!--...--&gt;</a>
-                </h3>
-                <p> Defines a comment</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;!DOCTYPE&gt;</a>
-                </h3>
-                <p>Defines document type.</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#" id="A">&lt;a&gt;</a>
-                </h3>
-                <p>Defines a hyperlink</p>
-              </div>
-            </div>
-            <!-- /.row -->
-
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;abbr&gt;</a>
-                </h3>
-                <p>Defines an abbreviation</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;acronym&gt;</a>
-                </h3>
-                <p>Defines an acronym</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;address&gt;</a>
-                </h3>
-                <p>Defines contact information for the author</p>
-              </div>
-            </div>
-
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;applet&gt;</a>
-                </h3>
-                <p>Defines an embedded applet</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;area&gt;</a>
-                </h3>
-                <p>Defines an area inside an image-map</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;article&gt;</a>
-                </h3>
-                <p>Defines an article</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;aside&gt;</a>
-                </h3>
-                <p>Defines content aside from the page content</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;audio&gt;</a>
-                </h3>
-                <p>Defines sound content</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a id="B" href="#">&lt;b&gt;</a>
-                </h3>
-                <p>Defines bold text</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;base&gt;</a>
-                </h3>
-                <p>specifies the base URL/target for all relative URLs in a document</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;basefront&gt;</a>
-                </h3>
-                <p>Specifies the base URL/target for all relative URLs in a document</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;bdi&gt;</a>
-                </h3>
-                <p>Isolates a part of text that might be formatted in a different direction from other text outside it</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;bdo&gt;</a>
-                </h3>
-                <p>Overrides the current text direction</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;big&gt;</a>
-                </h3>
-                <p>Defines big text</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">
-                    &lt;blockquote&gt;
-                  </a>
-                </h3>
-                <p>Defines a section that is quoted from another source</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 ">
-                <h3>
-                  <a href="#">&lt;body&gt;</a>
-                </h3>
-                <p> Defines a section that is quoted from another source</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;br&gt;</a>
-                </h3>
-                <p>Defines a single line break</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;button&gt;</a>
-                </h3>
-                <p>Defines a clickable button</p>
-              </div>
-            </div>
-            <!-- /.row -->
-
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#" id="C">&lt;canvas&gt;</a>
-                </h3>
-                <p>Used to draw graphics</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;caption&gt;</a>
-                </h3>
-                <p>Defines a table caption</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;center&gt;</a>
-                </h3>
-                <p>Defines centered text</p>
-              </div>
-            </div>
-
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;cite&gt;</a>
-                </h3>
-                <p>Defines the title of a work</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;code&gt;</a>
-                </h3>
-                <p>Defines a piece of computer code</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;col&gt;</a>
-                </h3>
-                <p>Specifies column properties for each column</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;colgroup&gt;</a>
-                </h3>
-                <p>Specifies a group of one or more columns in a table for formatting</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a id="D" href="#">&lt;datalist&gt;</a>
-                </h3>
-                <p>Specifies a list of pre-defined options for input controls</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;dd&gt;</a>
-                </h3>
-                <p>Defines a description/value of a term in a description list</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;del&gt;</a>
-                </h3>
-                <p>Defines text that has been deleted from a document</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;details&gt;</a>
-                </h3>
-                <p>Defines additional details that the user can view or hide</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;dfn&gt;</a>
-                </h3>
-                <p>Represents the defining instance of a term</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;dialog&gt;</a>
-                </h3>
-                <p>Defines a dialog box or window</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;dir&gt;</a>
-                </h3>
-                <p>Defines a directory list</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;div&gt;</a>
-                </h3>
-                <p>Defines a section in a document</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 ">
-                <h3>
-                  <a href="#">&lt;dl&gt;</a>
-                </h3>
-                <p>Defines a description list</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;dt&gt;</a>
-                </h3>
-                <p>Defines a term/name in a description list</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a id="E" href="#">&lt;em&gt;</a>
-                </h3>
-                <p>Defines emphasized text</p>
-              </div>
-            </div>
-            <!-- /.row -->
-
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;embed&gt;</a>
-                </h3>
-                <p>Defines a container for an external (non-HTML) application</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a id="F" href="#">&lt;fieldset&gt;</a>
-                </h3>
-                <p>Groups related elements in a form</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;figcaption&gt;</a>
-                </h3>
-                <p>Defines a caption for a figure element</p>
-              </div>
-            </div>
-
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;figure&gt;</a>
-                </h3>
-                <p>Specifies self-contained content</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;font&gt;</a>
-                </h3>
-                <p>Defines font, color, and size for text</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;footer&gt;</a>
-                </h3>
-                <p>Defines a footer for a document or section</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;form&gt;</a>
-                </h3>
-                <p>Defines an HTML form for user input</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;frame&gt;</a>
-                </h3>
-                <p>Defines a window in a frameset</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;frameset&gt;</a>
-                </h3>
-                <p>Defines a set of frames</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a id="H" href="#">&lt;h1&gt; to &lt;h6&gt;</a>
-                </h3>
-                <p>Defines html headings</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;head&gt;</a>
-                </h3>
-                <p>Defines information about the document</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;header&gt;</a>
-                </h3>
-                <p>Defines a header for a document or section</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;hr&gt;</a>
-                </h3>
-                <p>Defines a thematic change in the content</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;html&gt;</a>
-                </h3>
-                <p>Defines the root of an HTML document</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a id="I" href="#">&lt;i&gt;</a>
-                </h3>
-                <p>Defines a part of text in an alternate voice or mood</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 ">
-                <h3>
-                  <a href="#">&lt;iframe&gt;</a>
-                </h3>
-                <p>Specifies an inline sub window (frame)</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;img&gt;</a>
-                </h3>
-                <p> Specifies an image </p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;input&gt;</a>
-                </h3>
-                <p>Defines an input control</p>
-              </div>
-            </div>
-            <!-- /.row -->
-
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a id="J" href="#">&lt;ins&gt;</a>
-                </h3>
-                <p>Defines a text that has been inserted into a document</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a id="K" href="#">&lt;kbd&gt;</a>
-                </h3>
-                <p>Defines keyboard input</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;keygen&gt;</a>
-                </h3>
-                <p>Defines a key-pair generator field (for forms)</p>
-              </div>
-            </div>
-
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a id="L" href="#">&lt;label&gt;</a>
-                </h3>
-                <p>Defines a label for an element</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;legend&gt;</a>
-                </h3>
-                <p>Defines a caption for a fieldset element</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;li&gt;</a>
-                </h3>
-                <p>Defines a list item</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;link&gt;</a>
-                </h3>
-                <p>Defines the relationship between a document and an external resource (most used to link to style sheets)</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a id="M" href="#">&lt;main&gt;</a>
-                </h3>
-                <p>Specifies the main content of a document</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;map&gt;</a>
-                </h3>
-                <p>Defines a client-side image-map</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;mark&gt;</a>
-                </h3>
-                <p>Defines marked/highlighted text</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;menu&gt;</a>
-                </h3>
-                <p>Defines a list/menu of commands</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;menuitem&gt;</a>
-                </h3>
-                <p>Defines a command/menu item that the user can invoke from a popup menu</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;meta&gt;</a>
-                </h3>
-                <p>Defines metadata about an HTML document</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;meter&gt;</a>
-                </h3>
-                <p>Defines a scalar measurement within a known range (a gauge)</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a id="N" href="#">&lt;nav&gt;</a>
-                </h3>
-                <p>Defines navigation links</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;noframes&gt;</a>
-                </h3>
-                <p>Defines an alternate content for users that do not support frames</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;noscript&gt;</a>
-                </h3>
-                <p>Defines an alternate content for users that do not support client-side scripts</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a id="O" href="#">&lt;object&gt;</a>
-                </h3>
-                <p>Defines an embedded object</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;ol&gt;</a>
-                </h3>
-                <p>Defines an ordered list</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;optgroup&gt;</a>
-                </h3>
-                <p>Defines a group of related options in a drop-down list</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;option&gt;</a>
-                </h3>
-                <p>Defines an option in a drop-down list</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;output&gt;</a>
-                </h3>
-                <p>Defines the result of a calculation</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a id="P" href="#">&lt;p&gt;</a>
-                </h3>
-                <p>Defines a paragraph</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;param&gt;</a>
-                </h3>
-                <p>Defines a parameter for an object</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;pre&gt;</a>
-                </h3>
-                <p>Defines preformatted text</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;progress&gt;</a>
-                </h3>
-                <p>Represents the progress of a task</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a id="Q" href="#">&lt;q&gt;</a>
-                </h3>
-                <p>Defines a short quotation</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a id="R" href="#">&lt;rp&gt;</a>
-                </h3>
-                <p>Defines what to show in browsers that do not support ruby annotations</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;rt&gt;</a>
-                </h3>
-                <p>Defines an explanation/pronunciation of characters (for East Asian typography)</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;ruby&gt;</a>
-                </h3>
-                <p>Defines a ruby annotation</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a id="S" href="#">&lt;s&gt;</a>
-                </h3>
-                <p>Defines text that is no longer correct</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;samp&gt;</a>
-                </h3>
-                <p>Defines sample output from a computer program</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;script&gt;</a>
-                </h3>
-                <p>Defines a client-side script</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;section&gt;</a>
-                </h3>
-                <p>Specifies a section</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;select&gt;</a>
-                </h3>
-                <p>Specifies a selectable list</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;small&gt;</a>
-                </h3>
-                <p>Defines small text</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;source&gt;</a>
-                </h3>
-                <p>Specifies media resources</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;span&gt;</a>
-                </h3>
-                <p>Specifies a section in a document</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;strong&gt;</a>
-                </h3>
-                <p>Defines strong text</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;style&gt;</a>
-                </h3>
-                <p>Specifies a style definition</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;sub&gt;</a>
-                </h3>
-                <p>Specifies subscripted text</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;summary&gt;</a>
-                </h3>
-                <p>Specifies a summary / caption for the details element</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;sup&gt;</a>
-                </h3>
-                <p>Defines superscripted text</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a id="T" href="#">&lt;table&gt;</a>
-                </h3>
-                <p>Specifies a table</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;tbody&gt;</a>
-                </h3>
-                <p>Specifies a table body</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;td&gt;</a>
-                </h3>
-                <p>Defines a table cell</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;template&gt;</a>
-                </h3>
-                <p>Declares HTML fragments that can be cloned and inserted in the document by script.</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;textarea&gt;</a>
-                </h3>
-                <p>Defines a text area</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;tfoot&gt;</a>
-                </h3>
-                <p>Defines a table footer</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;th&gt;</a>
-                </h3>
-                <p>Defines a table header</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;thead&gt;</a>
-                </h3>
-                <p>Used to group header content in an HTML table</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;time&gt;</a>
-                </h3>
-                <p>Specifies a date/time</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;title&gt;</a>
-                </h3>
-                <p>Defines the document title</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;tr&gt;</a>
-                </h3>
-                <p>Defines a table row</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;track&gt;</a>
-                </h3>
-                <p>Specifies a text track for media such as video and audio</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a id="U" href="#">&lt;u&gt;</a>
-                </h3>
-                <p>Specifies text with a non-textual annotation.</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;ul&gt;</a>
-                </h3>
-                <p>Defines an unordered list</p>
-              </div>
-            </div>
-            <!-- /.row -->
-            <!-- Projects Row -->
-            <div class="row">
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a id="V" href="#">&lt;var&gt;</a>
-                </h3>
-                <p>Defines a variable</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a href="#">&lt;video&gt;</a>
-                </h3>
-                <p>Specifies a video</p>
-              </div>
-              <div class="col-md-4 portfolio-item">
-
-                <h3>
-                  <a id="W" href="#">&lt;wbr&gt;</a>
-                </h3>
-                <p>Specifies a line break opportunity for very long words and strings of text with no spaces.</p>
-              </div>
-            </div>
-            <!-- /.row -->
-
-
-          </div>
-        </div>
-        <br />
-        <br />
-        <br />
-        <hr />
-
-        <!-- Pagination -->
-        <div class="row text-center">
-          <div class="col-lg-12">
-            <ul class="pagination">
-              <li>
-                <a href="#">&laquo;</a>
-              </li>
-              <li class="active">
-                <a href="#A">A</a>
-              </li>
-              <li>
-                <a href="#B">B</a>
-              </li>
-              <li>
-                <a href="#C">C</a>
-              </li>
-              <li>
-                <a href="#D">D</a>
-              </li>
-              <li>
-                <a href="#E">E</a>
-              </li>
-              <li>
-                <a href="#F">F</a>
-              </li>
-              <li>
-                <a href="#G">G</a>
-              </li>
-              <li>
-                <a href="#H">H</a>
-              </li>
-              <li>
-                <a href="#I">I</a>
-              </li>
-              <li>
-                <a href="#J">J</a>
-              </li>
-              <li>
-                <a href="#K">K</a>
-              </li>
-              <li>
-                <a href="#L">L</a>
-              </li>
-              <li>
-                <a href="#M">M</a>
-              </li>
-              <li>
-                <a href="#N">N</a>
-              </li>
-              <li>
-                <a href="#O">O</a>
-              </li>
-              <li>
-                <a href="#P">P</a>
-              </li>
-              <li>
-                <a href="#Q">Q</a>
-              </li>
-              <li>
-                <a href="#R">R</a>
-              </li>
-              <li>
-                <a href="#S">S</a>
-              </li>
-              <li>
-                <a href="#T">T</a>
-              </li>
-              <li>
-                <a href="#U">U</a>
-              </li>
-              <li>
-                <a href="#V">V</a>
-              </li>
-              <li>
-                <a href="#W">W</a>
-              </li>
-              <li>
-                <a href="#X">X</a>
-              </li>
-              <li>
-                <a href="#Y">Y</a>
-              </li>
-              <li>
-                <a href="#Z">Z</a>
-              </li>
-              <li>
-                <a href="#ALL">ALL</a>
-              </li>
-              <li>
-                <a href="#">&raquo;</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- /.row -->
-
-        <hr />
-
-        <!-- Footer -->
-        <footer>
-          <div class="row">
-            <div class="col-lg-12">
-              <p>
-                Copyright &copy; 2015<a href="contact.html"> PoweredByCoffee </a>
-              </p>
-            </div>
-          </div>
-          <!-- /.row -->
-        </footer>
-
-      </div>
-
+      <hr />
     </div>
-    <!-- /.container -->
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <!-- Page Number -->
+    <div class="outer_container" style="text-align:center;">
+      <ul class="page-number">
+        <li>
+          <a id="left-arrow" href="#">&laquo;</a>
+        </li>
+        <li>
+          <a href="#A">A</a>
+        </li>
+        <li>
+          <a href="#B">B</a>
+        </li>
+        <li>
+          <a href="#C">C</a>
+        </li>
+        <li>
+          <a href="#D">D</a>
+        </li>
+        <li>
+          <a href="#E">E</a>
+        </li>
+        <li>
+          <a href="#F">F</a>
+        </li>
+        <li>
+          <a href="#G">G</a>
+        </li>
+        <li>
+          <a href="#H">H</a>
+        </li>
+        <li>
+          <a href="#I">I</a>
+        </li>
+        <li>
+          <a href="#J">J</a>
+        </li>
+        <li>
+          <a href="#K">K</a>
+        </li>
+        <li>
+          <a href="#L">L</a>
+        </li>
+        <li>
+          <a href="#M">M</a>
+        </li>
+        <li>
+          <a href="#N">N</a>
+        </li>
+        <li>
+          <a href="#O">O</a>
+        </li>
+        <li>
+          <a href="#P">P</a>
+        </li>
+        <li>
+          <a href="#Q">Q</a>
+        </li>
+        <li>
+          <a href="#R">R</a>
+        </li>
+        <li>
+          <a href="#S">S</a>
+        </li>
+        <li>
+          <a href="#T">T</a>
+        </li>
+        <li>
+          <a href="#U">U</a>
+        </li>
+        <li>
+          <a href="#V">V</a>
+        </li>
+        <li>
+          <a href="#W">W</a>
+        </li>
+        <li>
+          <a href="#X">X</a>
+        </li>
+        <li>
+          <a href="#Y">Y</a>
+        </li>
+        <li>
+          <a href="#Z">Z</a>
+        </li>
+        <li>
+          <a href="#ALL">ALL</a>
+        </li>
+        <li>
+          <a id="right-arrow" href="#">&raquo;</a>
+        </li>
+      </ul>
+      <hr />
+    </div>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
+    <!-- Footer -->
+    <footer>
+      <div class="outer_container">
+        <p>
+          Copyright &copy; 2015<a href="404.html"> PoweredByCoffee </a>
+        </p>
+      </div>
+    </footer>
   </body>
-
 </html>
