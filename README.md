@@ -16,7 +16,6 @@ tag name: Just the name of the tag such as br or table. Don't write <br> or anyt
 
 tag description: There is a short version and long version. These should be different. The short version will be used on homepage and in filtering tags. The long version will be used in the tag page. 
 
-<<<<<<< HEAD
 For example (the br tag):
 
 Short Version: Defines a single line break.
@@ -25,16 +24,7 @@ Long Version: The br tag defines a single line break in an HTML document. The ta
 Tag Example - There are two fields for this. The first one should be the actual html code for the example (don't include head/body and all that stuff). The next one it the html code formatted for ouput in the browser, so < and > are replaced with &lt; and &gt;. etc.
 
 NOTE: This should be automated. If anyone wants to tackle this feel free! But there are tools out there that do this for you.
-=======
         For example (the br tag):
-
-        Short Version: Defines a single line break.
-        Long Version: The br tag defines a single line break in an HTML document. The tag is considered empty and therefore does not require a closing tag.
-
-Tag Example - There are two fields for this. The first one should be the actual html code for the example (don't include head/body and all that stuff). The next one it the html code formatted for ouput in the browser, so < and > are replaced with &lt; and &gt;. etc.
-
-        NOTE: This should be automated. If anyone wants to tackle this feel free! But there are tools out there that do this for you.
->>>>>>> 5222e471cb090e8ae6914354a775c99e03d27633
 
 Browser Support section. Write Yes if supported or first version number to support the tag if all versions of the browser do not support the tag.
 
