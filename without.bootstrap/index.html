@@ -10,7 +10,9 @@
     <meta name="author" content="PoweredByCoffee" />
 
     <title>Powered By Coffee HTML Reference</title>
-
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
+    <script src="js/search.js" type="text/javascript"></script>
     <!-- Bootstrap Core CSS -->
     <link href="css/style.css" rel="stylesheet" />
     <!-- Add Icon for the Website -->
@@ -45,8 +47,8 @@
               <a href="contact.html">Contact</a>
             </li>
             <li>
-              <input style="margin-left:30px;" type="text" placeholder="Search" />
-              <button class="goButton" value="submit" type="submit"> Go </button>
+              <input style="margin-left:30px;" type="text" id="s_tagName" placeholder="Search" />
+              <button class="goButton" value="submit" onclick="search_tag()"> Go </button>
             </li>
           </ul>
         </div>
