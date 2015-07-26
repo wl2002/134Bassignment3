@@ -11,11 +11,17 @@ function search_tag() {
 	console.log(s_tagName);
 	dataRefd.child(s_tagName).once("value", function(snapshot) {
 		if (snapshot.val() === null){
-			alert("not found");
+			var notFound = window.open("","_blank", "toolbar=yes, scrollbars=yes,status=yes, resizable=yes, top=100, left=400, width=600, height=400");
+			
+			notFound.document.write("<h2>No result found for : </h2>")
+			notFound.document.write("<hr />");
+			notFound.document.write("<h2>" + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;"+snapshot.key()+"&gt " );
 		}
-		if (snapshot.val() !== null) {
-		    var myWindow = window.open("", "MsgWindow", "width=600, height=600");
-			myWindow.document.write("<p>Check the following result:</p>" + "&lt;"+snapshot.key()+"&gt; ");
+		else  {
+		    var found = window.open("","_blank", "toolbar=yes, scrollbars=yes,status=yes, resizable=yes, top=100, left=400, width=600, height=400");
+			found.document.write("<h2>Check the following result:</h2>");
+			found.document.write("<hr />");
+			found.document.write("<h2>" + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;"+snapshot.key()+"&gt ");
 		}
 		
 			
