@@ -1,0 +1,152 @@
+
+<html>
+<body>
+<script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+</body>
+
+<h1>Insert New Tag</h1>
+
+<form method="post" onsubmit="add_tag()">
+    <label for="tagName">Tag Name:</label>
+    <input type="text" id="tagName" placeholder="br, table, form, etc."><br><br>
+
+    <label for="tagDescriptionShort">Tag Description (Short):</label>
+    <input type="text" id="tagDescriptionShort" placeholder="type description here"><br><br>
+
+    <label for="tagDescriptionLong">Tag Description (Long):</label>
+    <input type="text" id="tagDescriptionLong" placeholder="type description here"><br><br>
+
+    <label for="tagExampleCode">Tag Example (html code here):</label>
+    <input type="text" id="tagExampleCode" placeholder="type html code here"><br><br>
+
+    <label for="tagExampleRaw">Tag Example (html formatted):</label>
+    <input type="text" id="tagExampleRaw" placeholder="type html code for browser output">
+
+    <h2>Browser Support Section</h2>
+
+    <label for="ieBrowser">Internet Explorer:</label>
+    <input type="text" id="ieBrowser" placeholder="Yes/No or Number"><br><br>
+
+    <label for="firefoxBrowser">Firefox:</label>
+    <input type="text" id="firefoxBrowser" placeholder="Yes/No or Number"><br><br>
+
+    <label for="chromeBrowser">Chrome:</label>
+    <input type="text" id="chromeBrowser" placeholder="Yes/No or Number"><br><br>
+
+    <label for="safariBrowser">Safari:</label>
+    <input type="text" id="safariBrowser" placeholder="Yes/No or Number"><br><br>
+
+    <label for="operaBrowser">Opera:</label>
+    <input type="text" id="operaBrowser" placeholder="Yes/No or Number"><br><br>
+
+    <input type="submit" id="submit_add" name="submit_add" value="Add Tag"><br><br>
+
+</form>
+
+<h1>Delete Tag</h1>
+
+<form method="post" onsubmit="delete_tag()">
+    <label for="d_tagName">Tag Name:</label>
+    <input type="text" id="d_tagName" placeholder="br, table, form, etc."><br><br>
+
+    <input type="submit" id="submit_delete" name="submit_delete" value="Delete Tag"><br><br>
+</form>
+
+<h1>Update Tag</h1>
+
+<form method="get" action="admin_update.html">
+    <label for="d_tagName">Tag Name:</label>
+    <input type="text" id="u_tagName" name="tag" placeholder="br, table, form, etc."><br><br>
+    <input type="submit" id="submit_update" name="submit_update"><br><br>
+</form>
+
+<script>
+
+
+    var dataRef = new Firebase("https://poweredbycoffee1.firebaseio.com/");
+    var descriptionRef = dataRef.child("description");
+    var browserRef = dataRef.child("browser");
+    var exampleRef = dataRef.child("example");
+
+
+    var dataRefd = new Firebase("https://poweredbycoffee1.firebaseio.com/description");
+
+
+    function add_tag() {
+
+        var tagName = $('#tagName').val();
+        var tagDescriptionShort = $('#tagDescriptionShort').val();
+        var tagDescriptionLong = $('#tagDescriptionLong').val();
+        var tagExampleCode = $('#tagExampleCode').val();
+        var tagExampleRaw = $('#tagExampleRaw').val();
+        var ieBrowser = $('#ieBrowser').val();
+        var firefoxBrowser = $('#firefoxBrowser').val();
+        var chromeBrowser = $('#chromeBrowser').val();
+        var safariBrowser = $('#safariBrowser').val();
+        var operaBrowser = $('#operaBrowser').val();
+
+
+
+        descriptionRef.child(tagName).set({
+            short_description: tagDescriptionShort,
+            long_description: tagDescriptionLong
+        });
+
+
+        browserRef.child(tagName).set({
+            internet_explorer: ieBrowser,
+            firefox: firefoxBrowser,
+            chrome: chromeBrowser,
+            safari: safariBrowser,
+            opera: operaBrowser
+        });
+
+
+        exampleRef.child(tagName).set({
+            html_code: tagExampleCode,
+            html_raw: tagExampleRaw
+        });
+
+        alert("Added " + tagName);
+
+
+    }
+
+    function delete_tag() {
+        var d_tagName = $('#d_tagName').val();
+
+        descriptionRef.child(d_tagName).set(null);
+        browserRef.child(d_tagName).set(null);
+        exampleRef.child(d_tagName).set(null);
+
+        alert("Deleted " + d_tagName);
+    }
+
+
+    function update_tag() {
+
+        alert("Retrieving data");
+        dataRefd.once("value", function(data) {
+            var dd = data.val();
+            console.log(dd.br.long_description);
+        });
+
+        alert("Data Received");
+
+
+    }
+
+
+    /*
+
+     dataRefd.once("value", function(data) {
+     var dd = data.val();
+     console.log(dd.br.long_description);
+     });
+
+     */
+
+</script>
+
+</html>
