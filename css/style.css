@@ -27,7 +27,6 @@ section {
 
 table {
     width:98%;
-	margin-left:10px;
 }
 table, th, td {
     border: 1px solid black;
@@ -202,7 +201,7 @@ nav input {
 	overflow:hidden;
 	margin:0px;
 	width:auto;
-	min-width:400px;
+	min-width:50px;
 	}
 
 /* END OF nav bar css style */
