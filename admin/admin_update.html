@@ -27,6 +27,7 @@
     var browserRef = new Firebase("https://poweredbycoffee1.firebaseio.com/browser/" + tag);
     var exampleRef = new Firebase("https://poweredbycoffee1.firebaseio.com/example/" + tag);
 
+    var attributeRef = new Firebase("https://poweredbycoffee1.firebaseio.com/attribute/" + tag);
     descriptionRef.once("value", function(snapshot) {
 
         var data = snapshot.val();
@@ -50,6 +51,18 @@
 
         field = document.getElementById("tagExampleRaw");
         field.value = data.html_raw;
+    });
+
+    attributeRef.once("value", function(snapshot) {
+
+	snapshot.forEach(function(childSnapshot) {
+		var childData = childSnapshot.val();
+		field = document.getElementById("tagAttributes");
+		field.value += childData.name + ",";
+	});
+
+	field.value = field.value.substring(0, field.value.length - 1);
+
     });
 
     browserRef.once("value", function(snapshot) {
@@ -82,6 +95,7 @@
         var tagDescriptionLong = $('#tagDescriptionLong').val();
         var tagExampleCode = $('#tagExampleCode').val();
         var tagExampleRaw = $('#tagExampleRaw').val();
+	var tagAttributes = $('$tagAttributes').val();
         var ieBrowser = $('#ieBrowser').val();
         var firefoxBrowser = $('#firefoxBrowser').val();
         var chromeBrowser = $('#chromeBrowser').val();
@@ -110,6 +124,44 @@
             html_raw: tagExampleRaw
         });
 
+	var attributes = tagAttributes.split(',');
+	for(i=0; i < attributes.length; i++) {
+		if (attributes[i] == "global") {
+			var globalA = [
+				"accesskey",
+				"class",
+				"contenteditable",
+				"contextmenu",
+				"data-*",
+				"dir",
+				"draggable",
+				"dropzone",
+				"hidden",
+				"id",
+				"lang",
+				"spellcheck",
+				"style",
+				"tabindex",
+				"title",
+				"translate",
+			];
+			
+			console.log(globalA);                        
+			for(j=0; j < globalA.length; j++) {
+			
+				attributeRef.child(tagName).push({
+					name: globalA[j]
+				});
+			}
+								
+		}
+		else {
+			attributeRef.child(tagName).push({
+				name: attributes[i]
+			});
+		}
+	}
+
         alert("Added " + tagName);
     }
 
@@ -131,6 +183,9 @@
 
     <label for="tagExampleRaw">Tag Example (html formatted):</label>
     <input type="text" id="tagExampleRaw" placeholder="type html code for browser output">
+
+    <label for="tagAttributes">Attribute (comma seperate):</label>
+    <input type="text" id="tagAttributes" placeholder="global, color, bgcolor, etc">
 
     <h2>Browser Support Section</h2>
 
