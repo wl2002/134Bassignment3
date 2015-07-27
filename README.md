@@ -12,7 +12,7 @@
     - Fill in the first form titled "Insert New Tag"
     - Click Add Tag!
 
-tag name: Just the name of the tag such as br or table. Don't write <br> or anything like that.
+tag name: Just the name of the tag such as br or table. Don't write &lt;br&gt; or anything like that.
 
 tag description: There is a short version and long version. These should be different. The short version will be used on homepage and in filtering tags. The long version will be used in the tag page. 
 
@@ -25,6 +25,14 @@ Tag Example - There are two fields for this. The first one should be the actual 
 
 NOTE: This should be automated. If anyone wants to tackle this feel free! But there are tools out there that do this for you.
         For example (the br tag):
+
+
+Attribut section: This should be a comma seperated list. PLEASE only put a comma between attribute names.
+
+Correct: color,bgcolor,id,class
+INCORRECT: color, bgcolor, id, class
+
+If you want to include the GLOBAL attributes as specified on w3school, just write global as one of the attributes. All lowercase. It will automatically expand.
 
 Browser Support section. Write Yes if supported or first version number to support the tag if all versions of the browser do not support the tag.
 
