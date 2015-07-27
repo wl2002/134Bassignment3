@@ -37,4 +37,4 @@ If you want to include the GLOBAL attributes as specified on w3school, just writ
 Browser Support section. Write Yes if supported or first version number to support the tag if all versions of the browser do not support the tag.
 
 
-IF YOU MAKE A MISTAKE: type the tag name in the update section, click submit, fix the mistake, click add tag and it will overwrite your submission. The update page should automatically fill in all the current data in the DB for the tag you chose. if it doesn't wait like 5 seconds.
+IF YOU MAKE A MISTAKE:: type the tag name in the update section, click submit, fix the mistake, click add tag and it will overwrite your submission. The update page should automatically fill in all the current data in the DB for the tag you chose. if it doesn't wait like 5 seconds.
