@@ -12,19 +12,16 @@
     <input type="text" id="tagName" placeholder="br, table, form, etc."><br><br>
 
     <label for="tagDescriptionShort">Tag Description (Short):</label>
-    <input type="text" id="tagDescriptionShort" placeholder="type short description here"><br><br>
+    <input type="text" id="tagDescriptionShort" placeholder="type description here"><br><br>
 
     <label for="tagDescriptionLong">Tag Description (Long):</label>
-    <input type="text" id="tagDescriptionLong" placeholder="type long description here"><br><br>
+    <input type="text" id="tagDescriptionLong" placeholder="type description here"><br><br>
 
     <label for="tagExampleCode">Tag Example (html code here):</label>
     <input type="text" id="tagExampleCode" placeholder="type html code here"><br><br>
 
     <label for="tagExampleRaw">Tag Example (html formatted):</label>
-    <input type="text" id="tagExampleRaw" placeholder="type html code for browser output"><br><br>
-
-    <label for="tagAttributes">Attribute (comma seperate):</label>
-    <input type="text" id="tagAttributes" placeholder="global, color, bgcolor, etc">
+    <input type="text" id="tagExampleRaw" placeholder="type html code for browser output">
 
     <h2>Browser Support Section</h2>
 
@@ -71,7 +68,7 @@
     var descriptionRef = dataRef.child("description");
     var browserRef = dataRef.child("browser");
     var exampleRef = dataRef.child("example");
-    var attributeRef = dataRef.child("attribute");
+
 
     var dataRefd = new Firebase("https://poweredbycoffee1.firebaseio.com/description");
 
@@ -83,7 +80,6 @@
         var tagDescriptionLong = $('#tagDescriptionLong').val();
         var tagExampleCode = $('#tagExampleCode').val();
         var tagExampleRaw = $('#tagExampleRaw').val();
-	var tagAttributes = $('#tagAttributes').val();
         var ieBrowser = $('#ieBrowser').val();
         var firefoxBrowser = $('#firefoxBrowser').val();
         var chromeBrowser = $('#chromeBrowser').val();
@@ -111,46 +107,9 @@
             html_code: tagExampleCode,
             html_raw: tagExampleRaw
         });
-        
-        var attributes = tagAttributes.split(',');
-        for(i=0; i < attributes.length; i++) {
-                if (attributes[i] == "global") {
-                        var globalA = [
-                                "accesskey",
-                                "class",
-                                "contenteditable",
-                                "contextmenu",
-                                "data-*",
-                                "dir",
-                                "draggable",
-                                "dropzone",
-                                "hidden",
-                                "id",
-                                "lang",
-                                "spellcheck",
-                                "style",
-                                "tabindex",
-                                "title",
-                                "translate",
-                        ];
 
-			console.log(globalA);                        
-                        for(j=0; j < globalA.length; j++) {
-                        
-                                attributeRef.child(tagName).push({
-                                        name: globalA[j]
-                                });
-                        }
-                                                                
-                }
-                else {
-                        attributeRef.child(tagName).push({
-                                name: attributes[i]
-                        });
-                }
-
-	}
         alert("Added " + tagName);
+
 
     }
 

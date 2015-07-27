@@ -7,13 +7,9 @@
  */
 
 body {
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-	font-size: 14px;
-	background-color: #fff;
-	width:100%;
-	height:100%;
-	margin: 0;
-	padding: 0;
+    margin: 0px auto; 
+    padding: 0;
+    width: 100%;
 }
 
 
@@ -24,6 +20,33 @@ header {
 	height:auto;
 	margin-bottom:30px; 
 }
+
+section {
+	padding-left:10px;
+}
+
+table {
+    width:98%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+   background-color:#fff;
+}
+table#t01 th	{
+    background-color: #F1B9B9;
+    color: black;
+}
+</style>
 
 @media (max-width: 910px) {
 	header {
@@ -154,24 +177,17 @@ nav input {
 	margin-left: auto;
 	margin-right: auto;
 	width: auto;
-
 }
 
-.outer_container { 
-	height: auto;
+.outer_container {
 	margin-left: auto;
 	margin-right: auto;
-	width:auto;
-
+	width: 80%;
+	max-width: 1200px;
+	height: auto;
+	overflow: auto;
 }
 
-/*
-@media (max-width: 400px) {
-	#inner_left_container {
-		display:none; 
-    }
-}
-*/
 
 #inner_left_container {
 	height:auto;
@@ -182,10 +198,13 @@ nav input {
 }
 
 #inner_right_container {
-	overflow:hidden;
+	overflow:scroll;
+	overflow-x:hidden;
+	max-height:580px;
 	margin:0px;
 	width:auto;
-	min-width:400px;
+	min-width:200px;
+	
 	}
 
 /* END OF nav bar css style */
